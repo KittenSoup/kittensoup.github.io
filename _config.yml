@@ -1,2 +1,4 @@
 theme: jekyll-theme-cayman
 logo: "/assets/lcWYbU6.jpg"
+description: foo
+show_downloads: false
