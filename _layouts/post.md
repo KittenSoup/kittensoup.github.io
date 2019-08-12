@@ -1,5 +1,6 @@
 ---
 layout: default
+description: ''
 ---
 <div class="post">
   <header class="post-header">
