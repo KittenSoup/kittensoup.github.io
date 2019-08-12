@@ -8,7 +8,7 @@ description: I put stuff here instead of in my head.
   {% for post in site.posts %}
     <li>
       <article>
-          {{ post.date }}
+          {{ page.date | date: '%B %d, %Y' }}
         <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
         <p>{{ post.excerpt }}</p>
       </article>
