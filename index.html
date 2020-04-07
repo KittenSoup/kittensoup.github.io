@@ -2,16 +2,19 @@
 layout: default 
 description: I put stuff here instead of in my head.
 ---
-<h2>Latest Posts</h2>
-
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <article>
-          {{ post.date | date_to_string }}
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <p>{{ post.excerpt }}</p>
-      </article>
-    </li>
-  {% endfor %}
-</ul>
+<div class="post-list">
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <article>
+          <div class="post-header">
+            <p class="post-date">{{ post.date | date_to_string }}</p>
+            <p class="post-tags">{{ post.tags | array_to_sentence_string: "💩" }}</p>
+          </div>
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt }}</p>
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
